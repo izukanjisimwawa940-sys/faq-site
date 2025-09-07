@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>FAQs</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f9f9f9;
+      padding: 2rem;
+    }
+    h1 {
+      text-align: center;
+      color: #333;
+    }
+    .faq {
+      max-width: 600px;
+      margin: 2rem auto;
+    }
+    .question {
+      background: #fff;
+      padding: 1rem;
+      margin-bottom: 0.5rem;
+      border: 1px solid #ddd;
+      cursor: pointer;
+    }
+    .answer {
+      display: none;
+      padding: 1rem;
+      background: #f1f1f1;
+      border-left: 3px solid #007BFF;
+    }
+  </style>
+</head>
+<body>
+  <h1>Frequently Asked Questions</h1>
+  <div class="faq">
+    <div class="question">What is this website about?</div>
+    <div class="answer">This is a simple FAQ page built with HTML, CSS, and JavaScript.</div>
+
+    <div class="question">How do I create a website?</div>
+    <div class="answer">You can start with basic HTML and CSS, then add interactivity with JavaScript.</div>
+
+    <div class="question">Can I host this locally?</div>
+    <div class="answer">Yes! You can use Python or Node.js to run a local server.</div>
+  </div>
+
+  <script>
+    const questions = document.querySelectorAll('.question');
+    questions.forEach(q => {
+      q.addEventListener('click', () => {
+        const answer = q.nextElementSibling;
+        answer.style.display = answer.style.display === 'block' ? 'none' : 'block';
+      });
+    });
+  </script>
+</body>
+</html>
